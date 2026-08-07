@@ -3,3 +3,5 @@ This project designs a database for a DJ's music library. We decided to focus on
 -decisions
 -challenges
 -reasonings
+
+
