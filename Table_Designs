@@ -1,0 +1,10 @@
+/* songs
+song_ID int AUTO_INCREMENT PK,
+title varchar(150) NOT NULL,
+duration_seconds in NULL,
+artist_id int FK NOT NULL,
+genres
+*/
+
+/* albums
+album_id int AUTO_INCREMENT PK,
