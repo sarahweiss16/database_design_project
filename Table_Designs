@@ -1,10 +1,50 @@
-/* songs
+CREATE DATABASE Music_Library;
+
+CREATE TABLE songs (
 song_ID int AUTO_INCREMENT PK,
 title varchar(150) NOT NULL,
-duration_seconds in NULL,
+bpm int NULL,
+duration_seconds int NULL,
 artist_id int FK NOT NULL,
-genres
-*/
+primary_genre int NOT NULL FK,
+album_id int NOT NULL FK,
+genre_id int NOT NULL FK
+);
 
-/* albums
+CREATE TABLE albums (
 album_id int AUTO_INCREMENT PK,
+name varchar(150) NOT NULL,
+artist_id int FK NOT NULL,
+release_year int NOT NULL,
+number_of_tracks smallint NULL,
+run_time_seconds int NULL,
+primary_genre int FK NOT NULL
+);
+
+CREATE TABLE artists (
+artist_id int AUTO_INCREMENT PK,
+name varchar(50) NOT NULL,
+primary_genre_id int FK
+);
+
+CREATE TABLE genre (
+genre_id int AUTO_INCREMENT PK,
+name varchar(50) NOT NULL
+);
+
+CREATE TABLE playlists (
+playlist_id int AUTO_INCREMENT PK,
+playlist_name varchar(100) NOT NULL
+);
+
+Relationships
+albums to songs (1:M): One album can contain many songs. A song belongs to one album.
+Many Songs to 1 artist
+genres to songs (1:M): One genre can be assigned to many songs. A song belongs to one genre.
+
+artists to albums (1:M): One artist can have many albums. An album belongs to one artist.
+Many Albums to 1 genres
+
+Many Artists to 1 genres
+playlists to songs (M:M): One playlist can have many songs; one song can be on many playlists. 
+
