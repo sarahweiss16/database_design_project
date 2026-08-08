@@ -1,11 +1,7 @@
-For this assignment, I designed a relational database structure consisting of five distinct tables to manage a music catalog. The architecture focuses on database normalization to eliminate duplicate data text entries.
+For this assignment, we designed a relational database structure consisting of five distinct tables to manage a music catalog. The architecture focuses on database normalization to eliminate duplicate data text entries.
+
 Entity and Attribute Breakdown:
 1. genres: Contains 'genre_id' (Primary Key) and 'genre_name' to serve as a streamlined classification lookup table.
 2. artists: Contains 'artist_id' (Primary Key) and 'artist_name' to track performers independently.
 3. albums: Contains 'album_id' (Primary Key), 'album_name', 'release_year', and 'artist_id' (Foreign Key). This table holds a 1-to-Many relationship with artists, meaning an artist can produce multiple albums.
-4. songs: Contains 'song_id' (Primary Key), 'title', 'bpm', 'track_key', 'album_id' (Foreign Key), and 'genre_id' (Foreign Key). Songs act as a child table linking directly to specific albums and genres via numeric IDs instead of repeating long string names.
-5. playlists: Contains 'playlist_id' (Primary Key) and 'playlist_name' to organize track sets.
-
-Relationship Logic and Constraints:
-To handle the relationship between playlists and songs, a Many-to-Many (M:M) relationship was implemented. Because a single song can reside on multiple playlists, and a single playlist contains multiple songs, this is resolved via an associative junction table (playlists_has_songs) containing composite foreign keys. 
-
+4. songs: Contains 'song_id' (Primary Key), 'song_name', 'bpm', 'album_id' (Foreign Key), 'artist_id' (Foreign Key), and 'genre_id' (Foreign Key). Songs act as a child table linking directly to specific albums and genres via numeric IDs instead of repeating long string names.
