@@ -6,7 +6,6 @@ title varchar(150) NOT NULL,
 bpm int NULL,
 duration_seconds int NULL,
 artist_id int FK NOT NULL,
-primary_genre int NOT NULL FK,
 album_id int NOT NULL FK,
 genre_id int NOT NULL FK
 );
