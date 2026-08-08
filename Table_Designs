@@ -38,12 +38,7 @@ playlist_name varchar(100) NOT NULL
 
 Relationships
 albums to songs (1:M): One album can contain many songs. A song belongs to one album.
-Many Songs to 1 artist
 genres to songs (1:M): One genre can be assigned to many songs. A song belongs to one genre.
-
 artists to albums (1:M): One artist can have many albums. An album belongs to one artist.
-Many Albums to 1 genres
-
-Many Artists to 1 genres
 playlists to songs (M:M): One playlist can have many songs; one song can be on many playlists. 
 
